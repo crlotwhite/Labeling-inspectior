@@ -42,6 +42,7 @@
             lvDict.Size = new Size(215, 339);
             lvDict.TabIndex = 0;
             lvDict.UseCompatibleStateImageBehavior = false;
+            lvDict.View = View.Details;
             lvDict.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // columnHeader1
@@ -61,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "DictView";
             Text = "Dictionary";
+            FormClosing += DictView_FormClosing;
             Load += DictView_Load;
             ResumeLayout(false);
         }
