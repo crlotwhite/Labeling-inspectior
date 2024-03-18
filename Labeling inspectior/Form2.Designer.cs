@@ -38,12 +38,14 @@
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
             listView1.Dock = DockStyle.Fill;
+            listView1.FullRowSelect = true;
             listView1.Location = new Point(0, 0);
             listView1.Name = "listView1";
             listView1.Size = new Size(455, 450);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
+            listView1.MouseDoubleClick += listView1_MouseDoubleClick;
             // 
             // columnHeader1
             // 
@@ -69,6 +71,7 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "Form2";
             Text = "lab file view";
+            Activated += Form2_Activated;
             Load += Form2_Load;
             ResumeLayout(false);
         }
